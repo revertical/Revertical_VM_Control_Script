@@ -10,7 +10,7 @@ from collections import deque
 import tkinter as tk
 from tkinter import ttk, messagebox
 
-def find_vbox_path():
+def check_vbox_bruh():
     path = shutil.which("VBoxManage")
     if path: return pathlib.Path(path)
     win_paths = [
@@ -22,7 +22,7 @@ def find_vbox_path():
         if p.exists(): return p
     return None
 
-VBOX_PATH = find_vbox_path()
+VBOX_PATH = check_vbox_bruh()
 
 VM_NAME = "VirtualMachineName"
 VIDEO_ID = "insert_id_here"
